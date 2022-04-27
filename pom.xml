@@ -6,7 +6,6 @@
 
     <groupId>co.thebeat</groupId>
     <artifactId>bigdata-trino-udfs</artifactId>
-    <packaging>jar</packaging>
     <version>1.0.0</version>
 
     <properties>

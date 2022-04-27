@@ -1,13 +1,14 @@
 # bigdata-trino-udfs
-A repo containing custom UDFs
+A repo containing trino UDFs
 
 To test it in a local trino setup check: https://hub.docker.com/r/trinodb/trino
 
-### Package jar:
+## Package jar:
+
     mvn clean package
 
-#### Output:
-    target/bigdata-trino-udfs.jar
+## Test Deployment:
 
-### Deploy:
-    docker run -p 8080:8080 -v "/path/to/repo/bigdata-trino-udfs/target/bigdata-trino-udfs.jar":/usr/lib/trino/plugin/udfs/bigdata-trino-udfs.jar --name trino trinodb/trino
+    docker run -p 8080:8080 -v "/path/to/repo/bigdata-trino-udfs/target/trino-udfs-0.0.1.jar":/usr/lib/trino/plugin/udfs/trino-udfs-0.0.1.jar --name trino trinodb/trino
+
+    docker exec -it trino trino --catalog tpch --schema sf1
