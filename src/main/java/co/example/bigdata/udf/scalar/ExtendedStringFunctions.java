@@ -11,7 +11,7 @@ public class ExtendedStringFunctions
 {
     private ExtendedStringFunctions() {}
 
-    @Description("custom udf from string to string")
+    @Description("udf: identity function for string input")
     @ScalarFunction("hive_pattern_to_trino")
     @SqlType(StandardTypes.VARCHAR)
     public static Slice hivePatternToTrino(@SqlType(StandardTypes.VARCHAR) Slice string)
